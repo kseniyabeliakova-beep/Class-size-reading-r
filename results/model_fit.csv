@@ -1,0 +1,5 @@
+"model","n","excluded_rows","residual_df","r_squared"
+"OLS without controls",2287,3,2285,0.00876176696010413
+"OLS with disadvantage",2287,3,2284,0.351660560147297
+"First stage",2290,0,2287,0.61811195818813
+"Two-stage least squares",2287,3,2284,0.345210291746666

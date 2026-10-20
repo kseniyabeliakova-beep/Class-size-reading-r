@@ -1,0 +1,85 @@
+Original ARE 106 Homework 5 models
+Data loaded locally; uploaded analysis.R is unchanged.
+
+
+Call:
+lm(formula = log(avgread) ~ log(classize), data = D)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.07080 -0.06917  0.01802  0.09217  0.28437 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    4.11931    0.03466 118.849  < 2e-16 ***
+log(classize)  0.04725    0.01051   4.494 7.33e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1276 on 2285 degrees of freedom
+  (3 observations deleted due to missingness)
+Multiple R-squared:  0.008762,	Adjusted R-squared:  0.008328 
+F-statistic:  20.2 on 1 and 2285 DF,  p-value: 7.333e-06
+
+
+Call:
+lm(formula = log(avgread) ~ log(classize) + pct_dis, data = D)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.94871 -0.05283  0.01286  0.06659  0.31510 
+
+Coefficients:
+                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    4.3840831  0.0290539 150.895   <2e-16 ***
+log(classize) -0.0071133  0.0086473  -0.823    0.411    
+pct_dis       -0.0048696  0.0001401 -34.756   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1032 on 2284 degrees of freedom
+  (3 observations deleted due to missingness)
+Multiple R-squared:  0.3517,	Adjusted R-squared:  0.3511 
+F-statistic: 619.4 on 2 and 2284 DF,  p-value: < 2.2e-16
+
+
+Call:
+lm(formula = log(classize) ~ log(m_rule) + pct_dis, data = D)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.10441 -0.04674  0.02812  0.08492  0.74846 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.6941134  0.0449211  15.452  < 2e-16 ***
+log(m_rule)  0.7841268  0.0132415  59.218  < 2e-16 ***
+pct_dis     -0.0012020  0.0002123  -5.663 1.68e-08 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1576 on 2287 degrees of freedom
+Multiple R-squared:  0.6181,	Adjusted R-squared:  0.6178 
+F-statistic:  1851 on 2 and 2287 DF,  p-value: < 2.2e-16
+
+
+Call:
+ivreg(formula = log(avgread) ~ log(classize) + pct_dis | log(m_rule) + 
+    pct_dis, data = D)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.95729 -0.05152  0.01269  0.06600  0.32039 
+
+Coefficients:
+                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    4.5217089  0.0375560 120.399  < 2e-16 ***
+log(classize) -0.0483343  0.0112059  -4.313 1.68e-05 ***
+pct_dis       -0.0049904  0.0001423 -35.064  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1037 on 2284 degrees of freedom
+Multiple R-Squared: 0.3452,	Adjusted R-squared: 0.3446 
+Wald test: 622.3 on 2 and 2284 DF,  p-value: < 2.2e-16 
+
